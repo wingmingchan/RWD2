@@ -1,0 +1,74 @@
+<!--#passthrough-top<?php
+require_once('/webfs/php_include/cascade/cascade_global.php');
+$responsive = true;
+echo $doctype;
+?>#passthrough-top--><html lang="en">
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title><system-region name="PAGE TITLE"/> | <div id="show-site-title-without-link"></div> | SUNY Upstate Medical University</title>
+<system-page-meta-keywords/>
+<system-page-meta-description/>
+<system-region name="GLOBAL SCRIPTS"/>
+<div id="show-javascript"></div>
+<div id="show-theme"></div>
+<div id="show-style"></div>
+<div id="show-page-style"></div>
+<system-region name="PAGE LEVEL OVERRIDE"/>
+<!--#passthrough<?php
+if(isset($canonical) && $canonical != '')
+{ echo "<link rel='canonical' href='http://www.upstate.edu/faculty/$canonical' />\n"; }
+?>#passthrough-->
+</head>
+<body>
+<system-region name="STORAGE"/>
+<div id="accessibility"><a href="#left-menu">Menu</a> <a href="#content">Skip to Content</a></div>
+<header id="header">
+<div id="global-menu-search-div">
+<div class="container" id="global-menu-search-container">
+<div id="show-global-menu"></div>
+<system-region name="SEARCH FORM"/></div>
+</div>
+<div class="container" id="logo-site-title-div">
+<div class="row">
+<div class="col-sm-3" id="logo-div">
+<div id="show-logo"></div>
+</div>
+<div class="col-sm-9" id="site-menu-handle-title-div">
+<div id="site-menu-handle"></div>
+<div id="show-site-title"></div>
+</div>
+</div>
+</div>
+<div id="site-title-menu-background"></div>
+</header>
+<div id="site-menu-bar-div">
+<div class="container" id="site-menu-div">
+<div id="show-menubar"></div>
+</div>
+</div>
+<div id="breadcrumb-div">
+<div class="container clearfix" id="breadcrumb-site-search-div"><div id="show-breadcrumb"></div>
+<div id="show-site-search"></div>
+</div>
+</div>
+<div id="banner-section"><system-region name="BANNER FULL WIDTH"/></div>
+<div class="container" id="main-div-wrapper"><system-region name="BANNER 12 COLUMNS"/> 
+<div id="main-div"><!--startprint-->
+<a id="content"><span class="hidden">Content</span></a> <system-region name="DEFAULT"/> 
+<div class="col-sm-12"><system-region name="BOTTOM"/></div>
+<!--stopprint--></div>
+<a class="cd-top" href="#0">Top</a></div>
+<footer id="footer" role="contentinfo">
+<div class="container" id="footer-content">
+<div id="show-global-footer"></div>
+</div>
+<div id="last-modified">
+<div id="show-last-modified"></div>
+<div id="show-footer-contact"></div>
+</div>
+</footer>
+<!--#passthrough<?php createGoogleCode(); createSpectateCode(); ?>#passthrough-->
+</body>
+</html>
