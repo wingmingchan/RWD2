@@ -1,5 +1,5 @@
 # RWD2
-RWD2 is my newest implementation of the master-template approach. My cascade-admin is driven by this newest implementation.
+RWD2 is my newest implementation of the master-template approach. My cascade-admin site is driven by this newest implementation.
 
 All the code I can post used in the implementation of RWD2 at Upstate. What is not included here are:
 
