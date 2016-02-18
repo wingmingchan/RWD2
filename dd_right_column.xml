@@ -1,0 +1,8 @@
+<system-data-structure>
+    <group identifier="with-background" label="Blocks with Background">
+        <asset type="block" identifier="block" label="Block" multiple="true" render-content-depth="5"/>
+    </group>
+    <group identifier="without-background" label="Blocks without Background">
+        <asset type="block" identifier="block" label="Block" multiple="true" render-content-depth="5"/>
+    </group>
+</system-data-structure>
