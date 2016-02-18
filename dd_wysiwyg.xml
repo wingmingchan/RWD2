@@ -1,0 +1,10 @@
+<system-data-structure>
+    <text identifier="block-type" label="Block type" restrict-to-groups="wing" default="wysiwyg"/>
+    <text type="radiobutton" identifier="display" label="Display" default="yes" required="true" help-text="Select yes to display">
+        <radio-item value="yes"/>
+        <radio-item value="no"/>
+    </text>
+    <group identifier="wysiwyg-group" label="WYSIWYG Group">
+        <text wysiwyg="true" identifier="wysiwyg-content" label="Content"/>
+    </group>
+</system-data-structure>
