@@ -1,0 +1,72 @@
+<!-- this dd and its accompanying macros are created by Peter Thomas, and hence with minor idiosyncrasies with identifiers -->
+<system-data-structure>
+    <text identifier="block-type" label="Block type" restrict-to-groups="wing" default="multimedia"/>
+    <text type="radiobutton" identifier="display" label="Display" default="yes" help-text="Select yes to display">
+        <radio-item value="yes"/>
+        <radio-item value="no"/>
+    </text>
+    <text type="radiobutton" identifier="choose-type" label="Choose A Type" default="singleimage" required="true" help-text="Select a block type">
+        <radio-item value="singleimage" show-fields="singleimage-group"/>
+        <radio-item value="random-image" show-fields="random-image-group"/>
+        <radio-item value="gallery" show-fields="gallery-group"/>
+        <radio-item value="slide-show" show-fields="slide-show-group"/>
+        <radio-item value="youtube-video" show-fields="youtube-video-group"/>
+    </text>
+    <!-- mediablock-singleimage -->
+    <group identifier="singleimage-group" label="Single Image">
+        <asset type="file" identifier="selectimage" label="Select Largest Image" required="true" help-text="The image must be 1000x500."/>
+        <text type="checkbox" identifier="srcSetYes" label="Sizes">
+            <checkbox-item value="This image has corresponding 700x350 and 400x200 images" checked="true"/>
+        </text>
+        <text identifier="altText" label="Description (Alt Text)" required="true"/>
+        <text type="checkbox" identifier="caption-yes" label="Caption">
+            <checkbox-item value="Show Description as Caption"/>
+        </text>
+        <asset type="page,file,symlink" identifier="image-link" label="Optional: link"/>
+    </group>
+    <!-- random-image -->
+    <group identifier="random-image-group" label="Random Image Group">
+        <text type="checkbox" identifier="srcSetYes" label="Sizes">
+            <checkbox-item value="These images have corresponding 700x350 and 400x200 images" checked="true"/>
+        </text>
+        <text type="checkbox" identifier="caption-yes" label="Caption">
+            <checkbox-item value="Show Description as Caption"/>
+        </text>
+        <group identifier="image" label="Image" multiple="true">
+            <asset type="file" identifier="selectimage" label="Select Largest Image" required="true"/>
+            <text identifier="altText" label="Description (Alt Text)" required="true"/>
+            <asset type="page,file,symlink" identifier="image-link" label="Optional: link"/>
+        </group>
+    </group>
+    <!-- gallery -->
+    <group identifier="gallery-group" label="Gallery Group">
+        <text type="checkbox" identifier="srcSetYes" label="Sizes">
+            <checkbox-item value="These images have corresponding 700x350 and 400x200 images" checked="true"/>
+        </text>
+        <group identifier="gallery-image-group" label="Image" multiple="true">
+            <asset type="file" identifier="gallery-image-chooser" label="Select image"/>
+            <text identifier="gallery-image-caption" label="Caption for the image"/>
+        </group>
+    </group>
+    <!-- mediablock-slide-show -->
+    <group identifier="slide-show-group" label="Slideshow">
+        <text type="checkbox" identifier="srcSetYes" label="Sizes">
+            <checkbox-item value="These images have corresponding 700x350 and 400x200 images" checked="true"/>
+        </text>
+        <text type="checkbox" identifier="caption-yes" label="Caption">
+            <checkbox-item value="Show Description as Caption"/>
+        </text>
+        <group identifier="image" label="Image" multiple="true" maximum-number="6" minimum-number="2">
+            <asset type="file" identifier="selectimage" label="Select Largest Image" required="true"/>
+            <text identifier="altText" label="Description (Alt Text)" required="true"/>
+            <asset type="page,file,symlink" identifier="image-link" label="Optional: link"/>
+        </group>
+    </group>
+    <!-- youtube -->
+    <group identifier="youtube-video-group" label="YouTube Video">
+        <text identifier="video-id" label="Video ID" required="true"/>
+        <text identifier="video-caption" label="Caption"/>
+        <text identifier="video-width" label="width" default="820"/>
+        <text identifier="video-height" label="height" default="410"/>
+    </group>
+</system-data-structure>
