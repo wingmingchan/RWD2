@@ -1,0 +1,13 @@
+<system-data-structure>
+    <asset type="block" identifier="global-menu" label="Global Menu" render-content-depth="5"/>
+    <asset type="file" identifier="logo" label="Site Logo" help-text="Choose the logo image."/>
+    <text identifier="logo-url" label="Site Logo URL"/>
+    <text identifier="title" label="Site Title"/>
+    <asset type="page" identifier="url" label="Site Home Page" help-text="Choose the root index of the site."/>
+    <asset type="block" identifier="javascript" label="JavaScript Library" render-content-depth="5"/>
+    <asset type="block" identifier="theme" label="Theme" render-content-depth="5"/>
+    <asset type="block" identifier="stylesheet" label="Local Style Sheet" render-content-depth="5"/>
+    <asset type="block" identifier="menubar" label="Top Site Menu Bar" render-content-depth="10"/>
+    <asset type="block" identifier="site-search" label="Site Search" render-content-depth="10"/>
+    <asset type="block" identifier="global-footer" label="Global Footer" render-content-depth="5"/>
+</system-data-structure>
