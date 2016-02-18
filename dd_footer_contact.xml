@@ -1,0 +1,4 @@
+<system-data-structure>
+    <text identifier="name" label="Contact Person&#39;s Name"/>
+    <text identifier="email" label="Contact Person&#39;s Email" help-text="Example: chanw"/>
+</system-data-structure>
