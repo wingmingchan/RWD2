@@ -1,0 +1,65 @@
+<system-data-structure>
+    <asset type="block" identifier="center-banner" label="Choose a banner block" render-content-depth="5"/>
+    <!-- the h1 string -->
+    <text identifier="main-content-title" label="H1 Page Title" required="true"/>
+    <!-- block after h1 -->
+    <asset type="block" identifier="post-title-chooser" label="Choose a block" render-content-depth="5"/>
+    <text type="radiobutton" identifier="size" label="Block horizontal size and floating" default="full">
+        <radio-item value="full"/>
+        <radio-item value="left"/>
+        <radio-item value="right"/>
+    </text>
+    <!-- the WYSIWYG right under the h1 -->
+    <text wysiwyg="true" identifier="main-content-content" label="Content"/>
+    <!-- alternating block chooser and WYSIWYG -->
+    <group identifier="content-group" label="Content Group" multiple="true" maximum-number="9" minimum-number="1">
+        <asset type="block" identifier="content-group-chooser" label="Choose a block" render-content-depth="5"/>
+        <text type="radiobutton" identifier="content-group-size" label="Block horizontal size" default="Full">
+            <radio-item value="full"/>
+            <radio-item value="half"/>
+        </text>
+        <!-- floating of block -->
+        <text type="radiobutton" identifier="content-group-block-floating" label="Float" default="left">
+            <radio-item value="left"/>
+            <radio-item value="right"/>
+        </text>
+        <text wysiwyg="true" identifier="content-group-content" label="Content"/>
+    </group>
+    <text type="radiobutton" identifier="rows" label="Rows" default="no">
+        <radio-item value="yes" show-fields="rows-group"/>
+        <radio-item value="no"/>
+    </text>
+    <group identifier="rows-group" label="Rows Group" multiple="true">
+        <group identifier="columns-group" label="Columns Group" multiple="true" maximum-number="4" minimum-number="1">
+            <text identifier="column-header" label="Column H2"/>
+            <asset type="block" identifier="column-block" label="Choose a block" render-content-depth="5" required="true"/>
+        </group>
+    </group>
+    <text type="radiobutton" identifier="left-column" label="Left column" default="yes">
+        <radio-item value="yes" show-fields="left-column-group"/>
+        <radio-item value="no"/>
+    </text>
+    <group identifier="left-column-group" label="Left Column Group">
+        <text type="radiobutton" identifier="left-setup" label="Left column setup" default="default">
+            <radio-item value="default"/>
+            <radio-item value="customized" show-fields="left-column-group/customized-left-group"/>
+        </text>
+        <group identifier="customized-left-group" label="Customized Left Group" multiple="true" maximum-number="9" minimum-number="1">
+            <asset type="block" identifier="customized-left-block-chooser" label="Choose a block" render-content-depth="5"/>
+        </group>
+    </group>
+    <text type="radiobutton" identifier="right-column" label="Right column" default="no">
+        <radio-item value="yes" show-fields="right-column-group"/>
+        <radio-item value="no"/>
+    </text>
+    <group identifier="right-column-group" label="Right Column Group">
+        <text type="radiobutton" identifier="right-setup" label="Right column setup" default="default">
+            <radio-item value="default"/>
+            <radio-item value="customized" show-fields="right-column-group/customized-right-group"/>
+        </text>
+        <group identifier="customized-right-group" label="Customized Right Group" multiple="true" maximum-number="9" minimum-number="1">
+            <asset type="block" identifier="customized-right-block-chooser" label="Choose a block" render-content-depth="5"/>
+        </group>
+    </group>
+    <asset type="block" identifier="site-storage" label="Choose a block" render-content-depth="5"/>
+</system-data-structure>
