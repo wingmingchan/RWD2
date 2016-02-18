@@ -1,0 +1,35 @@
+<system-data-structure>
+    <text identifier="block-type" label="Block type" restrict-to-groups="wing" default="designer-pro-block"/>
+    <text type="radiobutton" identifier="display" label="Display" default="yes" help-text="Select yes to display">
+        <radio-item value="yes"/>
+        <radio-item value="no"/>
+    </text>
+    <text type="radiobutton" identifier="choose-type" label="Choose A Type" default="homepage-slideshow" required="true" help-text="Select a block type">
+        <radio-item value="homepage-slideshow" show-fields="homepage-slideshow-group"/>
+    </text>
+    <!-- slide-show -->
+    <group identifier="homepage-slideshow-group" label="Homepage Slideshow">
+        <text type="checkbox" identifier="advanced" label="Show Advanced">
+            <checkbox-item value="Yes" show-fields="homepage-slideshow-group/srcSetYes, homepage-slideshow-group/large-suffix, homepage-slideshow-group/medium-suffix, homepage-slideshow-group/small-suffix, homepage-slideshow-group, homepage-slideshow-group/subheadlineYes, homepage-slideshow-group/caption-class"/>
+        </text>
+        <text type="checkbox" identifier="srcSetYes" label="Use scrset?">
+            <checkbox-item value="Yes" checked="true" show-fields="homepage-slideshow/large-suffix, homepage-slideshow/medium-suffix, homepage-slideshow/small-suffix"/>
+        </text>
+        <text identifier="large-suffix" label="Large Suffix (default none)"/>
+        <text identifier="medium-suffix" label="Medium Suffix" default="-700x233"/>
+        <text identifier="small-suffix" label="Small Suffix" default="-400x133"/>
+        <text identifier="caption-class" label="Caption Class" default="flexslider-hp-caption pull-right col-xs-12 col-sm-5 col-sm-4 pad5"/>
+        <text type="checkbox" identifier="subheadlineYes" label="headline and subheadline caption format">
+            <checkbox-item value="Yes" checked="true"/>
+        </text>
+        <group identifier="image" multiple="true" maximum-number="6" minimum-number="2">
+            <asset type="file" identifier="selectimage" label="Select Large Image" required="true"/>
+            <text type="checkbox" identifier="caption-yes" label="Caption">
+                <checkbox-item value="Yes" checked="true" show-fields="homepage-slideshow/image/subheadline"/>
+            </text>
+            <text identifier="altText" label="Title and alt text" required="true"/>
+            <text identifier="subheadline" label="Caption Subheadline"/>
+            <asset type="page,file,symlink" identifier="image-link" label="Optional: link"/>
+        </group>
+    </group>
+</system-data-structure>
