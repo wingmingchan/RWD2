@@ -1,0 +1,62 @@
+<system-data-structure>
+    <text identifier="block-type" label="Block type" restrict-to-groups="wing" default="megablock"/>
+    <text type="radiobutton" identifier="display" label="Display" default="yes" required="true" help-text="Select yes to display">
+        <radio-item value="yes"/>
+        <radio-item value="no"/>
+    </text>
+    <text type="radiobutton" identifier="choose-type" label="Choose A Type" default="wysiwyg" required="true" help-text="Select a block type">
+        <radio-item value="accordion" show-fields="accordion-group"/>
+        <radio-item value="contact" show-fields="contact-group"/>
+        <radio-item value="quick-links" show-fields="quick-links-group"/>
+        <radio-item value="wysiwyg" show-fields="wysiwyg-group"/>
+    </text>
+    <!-- accordion -->
+    <group identifier="accordion-group" label="Accordion Group">
+        <group identifier="accordion-h2-wysiwyg-group" label="H2 WYSIWYG Group" multiple="true">
+            <text identifier="accordion-h2" label="H2 Text" help-text="Text to be clicked to expand the hidden content"/>
+            <text wysiwyg="true" identifier="accordion-wysiwyg" label="Content"/>
+        </group>
+    </group>
+    <!-- Contact -->
+    <group identifier="contact-group" label="Contact Group">
+        <text identifier="contact-intro-text" label="Introduction text" help-text="Text appearing before Contact:"/>
+        <text identifier="contact-name" label="Name"/>
+        <text identifier="contact-title" label="Title" help-text="This value will be italicized and put after the name."/>
+        <text type="checkbox" identifier="contact-keep-contact-label" label="Keep label Contact" help-text="Uncheck this to remove the label Contact:">
+            <checkbox-item value="Yes" checked="true"/>
+        </text>
+        <text identifier="contact-location" label="Location" help-text="This field allows one line only. If line break is needed, use Additional Field."/>
+        <group identifier="contact-af-group" label="Additional Field" multiple="true" minimum-number="1">
+            <text identifier="contact-af-label" label="Label" help-text="The label in boldface preceding the content. There is a semi-colon between the label and content."/>
+            <text identifier="contact-af-content" label="Content" help-text="Each value will be in a line by itself. If there is a label, it will follow the label."/>
+        </group>
+        <text identifier="contact-phone" label="Phone" help-text="Format: 315 464-XXXX"/>
+        <text identifier="contact-fax" label="Fax" help-text="Format: 315 464-XXXX"/>
+        <text identifier="contact-email" label="Email" default="@upstate.edu"/>
+    </group>
+    <!-- Quick Links -->
+    <group identifier="quick-links-group" label="Quick Links Group">
+        <text type="dropdown" identifier="quick-links-class" label="Class" default="quick-links-bullets">
+            <dropdown-item value="quick-links-buttons"/>
+            <dropdown-item value="quick-links-bullets"/>
+            <dropdown-item value="quick-links-menu"/>
+            <dropdown-item value="quick-links-no-bullets"/>
+        </text>
+        <text identifier="quick-links-title" label="Title of the box"/>
+        <group identifier="quick-links-list-group" label="Links" multiple="true" collapsed="true">
+            <text identifier="quick-links-text" label="Link text"/>
+            <asset type="page,file,symlink" identifier="quick-links-linkable" label="Page, file, or external link" help-text="Select a page, a file, or an external link"/>
+            <text type="radiobutton" identifier="quick-links-icon" label="Icon" default="None">
+                <radio-item value="None"/>
+                <radio-item value="PDF"/>
+                <radio-item value="External"/>
+                <radio-item value="Word"/>
+                <radio-item value="Intra"/>
+            </text>
+        </group>
+    </group>
+    <!-- WYSIWYG -->
+    <group identifier="wysiwyg-group" label="WYSIWYG Group">
+        <text wysiwyg="true" identifier="wysiwyg-content" label="Content"/>
+    </group>
+</system-data-structure>
