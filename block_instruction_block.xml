@@ -1,0 +1,11 @@
+<system-data-structure>
+    <text identifier="block-type" label="Block type" default="instruction-block"/>
+    <text type="radiobutton" identifier="display" label="Display" default="yes" help-text="Select yes to display">
+        <radio-item value="yes"/>
+        <radio-item value="no"/>
+    </text>
+    <group identifier="instruction-block-group">
+        <asset type="block" identifier="block"  render-content-depth="5"/>
+        <asset type="block" identifier="instruction"  render-content-depth="5"/>
+    </group>
+</system-data-structure>
