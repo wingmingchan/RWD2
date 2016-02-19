@@ -1,0 +1,15 @@
+<system-data-structure>
+    <text type="checkbox" identifier="ui" label="jQuery UI">
+        <checkbox-item value="Select"/>
+    </text>
+    <text type="checkbox" identifier="accordion" label="Accordion">
+        <checkbox-item value="Select"/>
+    </text>
+    <text type="checkbox" identifier="visuallightbox" label="Visual Lightbox">
+        <checkbox-item value="Select"/>
+    </text>
+    <text type="checkbox" identifier="flexslider" label="Flex Slider">
+        <checkbox-item value="Select"/>
+    </text>
+    <asset type="file" identifier="local-js-chooser" label="Local JS file"/>
+</system-data-structure>
