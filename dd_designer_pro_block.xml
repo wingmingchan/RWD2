@@ -1,3 +1,4 @@
+<!-- this dd and its accompanying macros are created by Peter Thomas, and hence with minor idiosyncrasies with identifiers -->
 <system-data-structure>
     <text identifier="block-type" label="Block type" restrict-to-groups="wing" default="designer-pro-block"/>
     <text type="radiobutton" identifier="display" label="Display" default="yes" help-text="Select yes to display">
