@@ -1,0 +1,8 @@
+<!--#passthrough<?php
+if( false ) { ?>#passthrough-->
+<div class="col-sm-3" id="search-div">
+<div id="search-form-div"><form action="http://www.upstate.edu/intra/search/index.php" id="search-form" method="get" name="search-form"><label class="hidden" for="terms"><span>Search</span></label>
+<div id="web-people-radio"><input checked="checked" id="web-radio" name="tab" value="web" type="radio" /><label for="web-radio">Web Pages</label> <span id="web-people-radio-pad"></span> <input id="people-radio" name="tab" value="people" type="radio" /> <label for="people-radio">People</label></div>
+<input name="sp" value="0" type="hidden" /> <input name="sy" value="0" type="hidden" /> <input name="ul" value="http://www.upstate.edu/" type="hidden" /> <input name="ul" value="http://library.upstate.edu/" type="hidden" /> <input name="o" value="long" type="hidden" /> <input value="submit" type="hidden" /> <input class="searchbox" id="terms" name="q" onblur="if(this.value=='') this.value='Search Upstate\'s Intranet';" onfocus="if(this.value=='Search Upstate\'s Intranet') this.value='';" size="30" value="Search Upstate's Intranet" type="text" /><a href="http://www.upstate.edu/ipage/intra/search/index.php"><img alt="Search button" id="search-button" src="/render/file.act?path=site://Upstate-Globals/assets/images/search.gif" height="24" width="24" /></a></form></div>
+</div>
+<!--#passthrough<?php } else { createSearchForm( $localflag );  } ?>#passthrough-->
