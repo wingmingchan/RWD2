@@ -61,5 +61,11 @@
             <asset type="block" identifier="customized-right-block-chooser" label="Choose a block" render-content-depth="5"/>
         </group>
     </group>
-    <asset type="block" identifier="site-storage" label="Choose a block" render-content-depth="5"/>
+    <group identifier="site-config-group" restrict-to-groups="wing" label="Site Config Group">
+        <asset type="block" identifier="site-storage" label="Site Info" render-content-depth="5"/>
+        <asset type="block" identifier="global-link-script" label="Global Link Script" render-content-depth="5"/>
+        <asset type="block" identifier="page-title" label="Page Title" render-content-depth="5"/>
+        <asset type="block" identifier="search-form" label="Search Form" render-content-depth="5"/>
+        <asset type="block" identifier="full-width-slideshow" label="Full Width Slideshow" render-content-depth="5"/>
+    </group>
 </system-data-structure>
