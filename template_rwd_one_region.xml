@@ -19,6 +19,7 @@ echo $doctype;
 if(isset($canonical) && $canonical != '')
 { echo "<link rel='canonical' href='http://www.upstate.edu/faculty/$canonical' />\n"; }
 ?>#passthrough-->
+<div id="show-page-level-override"></div>
 </head>
 <body>
 <!-- from the one-region template -->
@@ -53,7 +54,7 @@ if(isset($canonical) && $canonical != '')
 </div>
 </div>
 <div id="banner-section"><div id="show-full-width-slideshow"></div></div>
-<div class="container" id="main-div-wrapper"> 
+<div class="container" id="main-div-wrapper"><div id="show-twelve-width-slideshow"></div>
 <div id="main-div"><!--startprint-->
 <a id="content"><span class="hidden">Content</span></a> <system-region name="DEFAULT"/> 
 <!--stopprint--></div>
