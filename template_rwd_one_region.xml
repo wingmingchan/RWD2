@@ -2,7 +2,7 @@
 require_once('/webfs/php_include/cascade/cascade_global.php');
 $responsive = true;
 echo $doctype;
-?>#passthrough-top--><html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+?>#passthrough-top--><html lang="en">
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
