@@ -2,7 +2,7 @@
 require_once('/webfs/php_include/cascade/cascade_global.php');
 $responsive = true;
 echo $doctype;
-?>#passthrough-top--><html lang="en">
+?>#passthrough-top--><html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -28,7 +28,8 @@ if(isset($canonical) && $canonical != '')
 <div id="global-menu-search-div">
 <div class="container" id="global-menu-search-container">
 <div id="show-global-menu"></div>
-<div id="show-search-form"></div></div>
+<div id="show-search-form"></div>
+</div>
 </div>
 <div class="container" id="logo-site-title-div">
 <div class="row">
@@ -49,16 +50,22 @@ if(isset($canonical) && $canonical != '')
 </div>
 </div>
 <div id="breadcrumb-div">
-<div class="container clearfix" id="breadcrumb-site-search-div"><div id="show-breadcrumb"></div>
+<div class="container clearfix" id="breadcrumb-site-search-div">
+<div id="show-breadcrumb"></div>
 <div id="show-site-search"></div>
 </div>
 </div>
-<div id="banner-section"><div id="show-full-width-slideshow"></div></div>
-<div class="container" id="main-div-wrapper"><div id="show-twelve-width-slideshow"></div>
+<div id="banner-section">
+<div id="show-full-width-slideshow"></div>
+</div>
+<div class="container" id="main-div-wrapper">
+<div id="show-twelve-width-slideshow"></div>
 <div id="main-div"><!--startprint-->
 <a id="content"><span class="hidden">Content</span></a> <system-region name="DEFAULT"/> 
+<div class="col-5xs-12 nopadding"><div id="show-bottom-outer"></div></div>
 <!--stopprint--></div>
-<a class="cd-top" href="#0">Top</a></div>
+</div>
+<a class="cd-top" href="#0">Top</a> 
 <footer id="footer" role="contentinfo">
 <div class="container" id="footer-content">
 <div id="show-global-footer"></div>
