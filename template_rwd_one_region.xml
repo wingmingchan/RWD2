@@ -1,5 +1,5 @@
 <!--#passthrough-top<?php
-require_once('/webfs/php_include/cascade/cascade_global.php');
+require_once('cascade/cascade_global.php');
 $responsive = true;
 echo $doctype;
 ?>#passthrough-top--><html lang="en">
@@ -56,16 +56,17 @@ if(isset($canonical) && $canonical != '')
 </div>
 </div>
 <div id="banner-section">
-<div id="show-full-width-slideshow"></div>
+<div id="show-top-outer"></div>
 </div>
 <div class="container" id="main-div-wrapper">
-<div id="show-twelve-width-slideshow"></div>
+<div id="show-top-inner"></div>
 <div id="main-div"><!--startprint-->
 <a id="content"><span class="hidden">Content</span></a> <system-region name="DEFAULT"/> 
 <div class="col-5xs-12 nopadding"><div id="show-bottom-outer"></div></div>
 <!--stopprint--></div>
 </div>
-<a class="cd-top" href="#0">Top</a> 
+<a class="cd-top" href="#0">Top</a>
+<div id="show-bottom-outmost"></div>
 <footer id="footer" role="contentinfo">
 <div class="container" id="footer-content">
 <div id="show-global-footer"></div>

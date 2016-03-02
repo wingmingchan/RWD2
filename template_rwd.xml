@@ -1,5 +1,5 @@
 <!--#passthrough-top<?php
-require_once('/webfs/php_include/cascade/cascade_global.php');
+require_once('cascade/cascade_global.php');
 $responsive = true;
 echo $doctype;
 ?>#passthrough-top--><html lang="en">
@@ -7,9 +7,10 @@ echo $doctype;
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<title><system-region name="PAGE TITLE"/> | <div id="show-site-title-without-link"></div> | SUNY Upstate Medical University</title>
+<title><system-region name="PAGE TITLE"/><div id="show-page-title"></div> | <div id="show-site-title-without-link"></div> | SUNY Upstate Medical University</title>
 <system-page-meta-keywords/>
 <system-page-meta-description/>
+<div id="show-global-link-script"></div>
 <system-region name="GLOBAL SCRIPTS"/>
 <div id="show-javascript"></div>
 <div id="show-theme"></div>
@@ -28,7 +29,7 @@ if(isset($canonical) && $canonical != '')
 <div id="global-menu-search-div">
 <div class="container" id="global-menu-search-container">
 <div id="show-global-menu"></div>
-<system-region name="SEARCH FORM"/></div>
+<system-region name="SEARCH FORM"/><div id="show-search-form"></div></div>
 </div>
 <div class="container" id="logo-site-title-div">
 <div class="row">
@@ -54,7 +55,7 @@ if(isset($canonical) && $canonical != '')
 </div>
 </div>
 <div id="banner-section"><system-region name="BANNER FULL WIDTH"/></div>
-<div class="container" id="main-div-wrapper"><system-region name="BANNER 12 COLUMNS"/> 
+<div class="container" id="main-div-wrapper"><system-region name="BANNER 12 COLUMNS"/><div id="show-twelve-width-slideshow"></div> 
 <div id="main-div"><!--startprint-->
 <a id="content"><span class="hidden">Content</span></a> <system-region name="DEFAULT"/> 
 <div class="col-sm-12"><system-region name="BOTTOM"/></div>
