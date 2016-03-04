@@ -9,6 +9,17 @@
     #evaluate( $chanw_foreach_statement )
 #end
     </generate-macro-foreach>
+    
+    <index-block-macro>
+#macro( -macro_name- $-node_type-Node )
+    #if( $-node_type-Node.name != $-element_name- )
+        Not a/an -node_type-!!!$BR
+        #stop
+    #end
+    #chanwGetNodeValues( $-node_type-Node $-map_name- )
+#end
+    </index-block-macro>
+    
     <single-group>
 #macro(-dispatch_macro_name- $systemDataStructure)
     #set($groupToBeProcessed=$systemDataStructure.getChild('-single_group_name-'))
@@ -17,6 +28,7 @@
     #chanwInvokeMacro($macroName ['groupToBeProcessed'])
 #end
     </single-group>
+    
     <multi-group>
 #macro(-macro_name- $systemDataStructure $region)
     #set($groupType=$systemDataStructure.getChild('choose-type').value)
@@ -32,6 +44,7 @@
     #end
 #end     
     </multi-group>
+    
     <site-map>
 #macro( -macro_name- $systemIndexBlock )
     #chanwCreateSiteMap( $systemIndexBlock )
