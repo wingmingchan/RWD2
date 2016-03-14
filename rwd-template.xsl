@@ -1,9 +1,4 @@
-<xsl:stylesheet
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xalan java" version="1.0"
-    xmlns:java="http://xml.apache.org/xalan/java"
-    xmlns:me="stylesheet"
-    xmlns:node="http://www.upstate.edu/chanw/node"
-    xmlns:xalan="http://xml.apache.org/xalan">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xalan java" version="1.0" xmlns:java="http://xml.apache.org/xalan/java" xmlns:me="stylesheet" xmlns:node="http://www.upstate.edu/chanw/node" xmlns:xalan="http://xml.apache.org/xalan">
     <xsl:include href="site://_common/formats/Upstate/library/node-processing"/>
     <xsl:output encoding="UTF-8" indent="yes" method="html"/>
     <!-- cleanup -->
@@ -43,10 +38,9 @@
         <element id="html-ng-app" name="div"/>
         <element id="body-ng-controller" name="div"/>
     </xsl:variable>
+    
     <xsl:template match="html">
-        <xsl:variable name="html-ng-app">
-            <xsl:value-of select="//div[@id='hide-html-ng-app']"/>
-        </xsl:variable>
+        <xsl:variable name="html-ng-app"><xsl:value-of select="//div[@id='hide-html-ng-app']"/></xsl:variable>
         <xsl:choose>
             <xsl:when test="not($html-ng-app='')">
                 <html data-ng-app="{$html-ng-app}" lang="en">
@@ -60,10 +54,9 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
     <xsl:template match="body">
-        <xsl:variable name="body-ng-controller">
-            <xsl:value-of select="//div[@id='hide-body-ng-controller']"/>
-        </xsl:variable>
+        <xsl:variable name="body-ng-controller"><xsl:value-of select="//div[@id='hide-body-ng-controller']"/></xsl:variable>
         <xsl:choose>
             <xsl:when test="not($body-ng-controller='')">
                 <body data-ng-controller="{$body-ng-controller}">
@@ -75,15 +68,17 @@
                     <xsl:apply-templates select="node()"/>
                 </body>
             </xsl:otherwise>
-        </xsl:choose>
+        </xsl:choose>        
     </xsl:template>
-    <xsl:template match="@*|node()" priority="-1">
+
+    <xsl:template match="@*|node()" priority="-1">  
         <xsl:variable name="name" select="name(.)"/>
         <xsl:variable name="id" select="@id"/>
         <!-- hide-whatever -->
         <xsl:variable name="hideid" select="concat('hide-', substring-after(@id, 'show-'))"/>
         <!-- content of hide-whatever -->
-        <xsl:variable name="hidden" select="//node()[name(.)=$name and @id=$hideid]/node()"/>
+        <xsl:variable name="hidden" select="//node()[name(.)=$name and @id=$hideid]/node()"/>               
+        
         <xsl:choose>
             <!-- remove hide-whatever -->
             <xsl:when test="xalan:nodeset($hide-elements)/element[@name=$name and $id=concat('hide-', @id)]"/>
@@ -99,6 +94,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
     <xsl:template match="//div[@id='hide-menubar']/nav/ul/li">
         <xsl:variable name="root-folder">
             <xsl:value-of select="//div[@id='root-folder']"/>
@@ -137,6 +133,7 @@
             </xsl:choose>
         </xsl:if>
     </xsl:template>
+    
     <!-- used to remove excessive whitespaces -->
     <xsl:template match="body//text()[not(ancestor::pre)]">
         <xsl:variable name="curtext">
@@ -153,18 +150,17 @@
         </xsl:variable>
         <xsl:value-of select="$noextraspace"/>
     </xsl:template>
+    
     <!-- process the a tag and add icons -->
     <xsl:template match="//a[ancestor::div[@id='center-only']|ancestor::div[@id='center-right']|ancestor::div[@id='left-center']|ancestor::div[@id='full-width']][not(img) and not(div)]">
         <xsl:choose>
             <xsl:when test="//text()">
                 <xsl:call-template name="node:process-a">
                     <xsl:with-param name="node" select="."/>
-                </xsl:call-template>
+                </xsl:call-template>                
             </xsl:when>
             <xsl:otherwise>
-                <a>
-                    <xsl:apply-templates select="@*|node()"/>
-                </a>
+                <a><xsl:apply-templates select="@*|node()"/></a>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
