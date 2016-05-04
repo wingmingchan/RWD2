@@ -7,7 +7,7 @@ echo $doctype;
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<title><div id="show-page-title"></div> | <div id="show-site-title-without-link"></div> | SUNY Upstate Medical University</title>
+<title><div id="show-page-title"></div> <div id="show-site-title-without-link"></div> SUNY Upstate Medical University</title>
 <system-page-meta-keywords/>
 <system-page-meta-description/>
 <div id="show-global-link-script"></div>
@@ -22,6 +22,9 @@ if(isset($canonical) && $canonical != '')
 <div id="show-page-level-override"></div>
 </head>
 <body>
+<!-- Google Tag Manager -->
+<!--#passthrough<?php createGoogleTagManager(); ?>#passthrough-->
+<!-- End Google Tag Manager -->
 <!-- from the one-region template -->
 <div id="accessibility"><a href="#left-menu">Menu</a> <a href="#content">Skip to Content</a></div>
 <header id="header">
