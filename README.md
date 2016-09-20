@@ -2,7 +2,7 @@
 
 Last modified: 8/22/2016 10:52 AM
 
-RWD2 is my newest implementation of the master-template approach. My cascade-admin site is driven by this newest implementation.
+RWD2, aka, the Standard Model, is my newest implementation of the master-template approach. This implementation contains a single one-region template used in all pages across multiple sites of the same design. My cascade-admin site is driven by this newest implementation.
 
 All the code I can post used in the implementation of RWD2 at Upstate can be found here. What is not included here are:
 
