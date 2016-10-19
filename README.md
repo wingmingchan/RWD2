@@ -23,7 +23,13 @@ What are used to generate the Hannon Hill site:
 1. _common_assets_wing.csse
 2. hannonhill-wing.csse
 
-Documentation:
-http://www.upstate.edu/cascade-admin/standard-model/index.php
+<h3>Documentation</h3>
+<ul>
+<li><a href="http://www.upstate.edu/cascade-admin/standard-model/index.php">The Standard Model</a></li>
+</ul>
 
-Tutorial recordings: https://www.youtube.com/playlist?list=PLiPcpR6GRx5dN3Z5-tAAMLgFX59Njkv6f
+<h3>Tutorial Recordings</h3>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PL5FL7lAbKiG-AYX35qK8y0FN7RgJl9ISD">Velocity and More</a> recordings</li>
+<li><a href="https://www.youtube.com/playlist?list=PLiPcpR6GRx5dN3Z5-tAAMLgFX59Njkv6f">One Template, One Region, and Lots of Velocity Tricks</a></li>
+</ul>
