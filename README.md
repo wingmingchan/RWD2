@@ -1,6 +1,6 @@
 # RWD2
 
-_common_assets_barebone.csse last modified: 10/25/2016 8:40 AM (Cleaned up the site)
+_common_assets_barebone.csse last modified: 10/30/2016 9:50 AM (Added chanwGetCascadeObjectFromElement)
 
 RWD2, aka, the Standard Model, is my newest design and implementation of the master-template approach. This implementation contains a single one-region template (template_rwd_one_region.xml) used in all pages across multiple sites of the same design. The Standard Model is also compatible with multiple-region templates (see template_rwd.xml, for example). All Upstate responsive sites are driven by the Standard Model.
 
