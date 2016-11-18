@@ -11,7 +11,7 @@ All the code I can post used in the implementation of the Standard Model can be 
 
 The core without (much) Upstate business logic and data
 
-1.  _common_assets_barebone.csse
+1.  _common_assets_barebone.csse (updated 11/18/2016)
 
 What are used in production at Upstate:
 
