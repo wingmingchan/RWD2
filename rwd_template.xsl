@@ -42,9 +42,15 @@
         <element id="page-info" name="div"/>
         <element id="html-ng-app" name="div"/>
         <element id="body-ng-controller" name="div"/>
+        <element id="page-include" name="div"/>
         <element id="code1" name="div"/>
         <element id="code2" name="div"/>
         <element id="code3" name="div"/>
+        <element id="code4" name="div"/>
+        <element id="code5" name="div"/>
+        <element id="code6" name="div"/>
+        <element id="code7" name="div"/>
+        <element id="code8" name="div"/>
     </xsl:variable>
     <xsl:template match="html">
         <xsl:variable name="html-ng-app">
@@ -155,14 +161,6 @@
             <xsl:value-of select="java:replaceAll($notab,'(\s){2}','')"/>
         </xsl:variable>
         <xsl:value-of select="$noextraspace"/>
-    </xsl:template>
-    <xsl:template match="title">
-        <xsl:variable name="title">
-            <xsl:value-of select="."/>
-        </xsl:variable>
-        <title>
-            <xsl:value-of select="java:replaceAll($title,' \|  \| ','')"/>
-        </title>
     </xsl:template>
     <!-- process the a tag and add icons -->
     <xsl:template match="//a[ancestor::div[@id='center-only']|ancestor::div[@id='center-right']|ancestor::div[@id='left-center']|ancestor::div[@id='full-width']][not(img) and not(div)]">
