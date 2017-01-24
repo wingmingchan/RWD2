@@ -13,12 +13,12 @@ The core without (much) Upstate business logic and data
 
 1.  _common_assets_barebone.csse
 
-What are used in production at Upstate:
+What are used in production at Upstate (last modified: 1/24/2017):
 
 1. _common_assets.csse
 2. _rwd_seed.csse
 
-What are used to generate the Hannon Hill site (last updated: 1/24/2017):
+What are used to generate the Hannon Hill site (last modified: 1/24/2017):
 
 1. _common_assets_wing.csse
 2. hannonhill-wing.csse
