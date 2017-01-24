@@ -18,7 +18,7 @@ What are used in production at Upstate:
 1. _common_assets.csse
 2. _rwd_seed.csse
 
-What are used to generate the Hannon Hill site:
+What are used to generate the Hannon Hill site (last updated: 1/24/2017):
 
 1. _common_assets_wing.csse
 2. hannonhill-wing.csse
