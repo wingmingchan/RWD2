@@ -1,6 +1,6 @@
 # RWD2
 
-_common_assets_barebone.csse last modified: 1/20/2017 3:15 PM
+_common_assets_barebone.csse last modified: 2/6/2017 12:00 PM
 
 RWD2, aka, the Standard Model, is my newest design and implementation of the master-template approach. This implementation contains a single one-region template (template_rwd_one_region.xml) used in all pages across multiple sites of the same design. In fact, in the implementation of the Hannon Hill site, I went further and used a single template containing only one line (<code>&lt;system-region name="DEFAULT"/&gt;</code>). 
 
