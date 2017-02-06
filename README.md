@@ -2,7 +2,7 @@
 
 _common_assets_barebone.csse last modified: 2/6/2017 12:00 PM
 
-RWD2, aka, the Standard Model, is my newest design and implementation of the master-template approach. This implementation contains a single one-region template (template_rwd_one_region.xml) used in all pages across multiple sites of the same design. In fact, in the implementation of the Hannon Hill site, I went further and used a single template containing only one line (<code>&lt;system-region name="DEFAULT"/&gt;</code>). 
+RWD2, aka, the Standard Model, is my newest design and implementation of the master-template approach. This implementation contains a single one-region template (template_rwd_one_region.xml) used in all pages across multiple sites of the same design. In fact, in the implementation of the Hannon Hill site, I went further and used a single template containing only one line (<code>&lt;system-region name="DEFAULT"/&gt;</code>). I have also introduced the concept of setup formats. They can be used to replace setup blocks and offer much more flexibility. 
 
 The Standard Model is also compatible with multiple-region templates (see template_rwd.xml, for example). All Upstate responsive sites are driven by the Standard Model.
 
