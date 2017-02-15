@@ -16,6 +16,7 @@ $ct_container_path
 $ct_name
 $block_folder_path
 $format_folder_path
+$format_data_folder_path
 $template_folder_path
 $calling_page_index_block_name
 $template_name
@@ -36,7 +37,12 @@ $start_time = time();
 // else nothing will be created if the site exists
 $create_assets = true;
 $slash         = "/";
+$data_path     = "data";
 
+//echo readData( $data_path, "default.txt" );
+
+
+/*/  /*/
 try
 {
     u\DebugUtility::setTimeSpaceLimits();
@@ -86,15 +92,17 @@ try
         $ct_container_path = trim( $ct_container_path, $slash );
         
     // data definition
-    $ct_name           = "RWD";
+    $ct_name = "RWD";
     
     // folders: full paths
-    $block_folder_path    = "blocks/index";
-    $block_folder_path    = trim( $block_folder_path, $slash );
-    $format_folder_path   = "formats/data";
-    $format_folder_path   = trim( $format_folder_path, $slash );
-    $template_folder_path = "templates";
-    $template_folder_path = trim( $template_folder_path, $slash );
+    $block_folder_path       = "blocks/index";
+    $block_folder_path       = trim( $block_folder_path, $slash );
+    $format_folder_path      = "formats";
+    $format_folder_path      = trim( $format_folder_path, $slash );
+    $format_data_folder_path = "formats/data";
+    $format_data_folder_path = trim( $format_data_folder_path, $slash );
+    $template_folder_path    = "templates";
+    $template_folder_path    = trim( $template_folder_path, $slash );
     
     // formats in formats/data
     // add more names here to generate more global components
@@ -154,14 +162,14 @@ try
         $block_folder = createContainerByPath(
             a\Folder::TYPE, $block_folder_path, $site_name );
         $format_folder = createContainerByPath(
-            a\Folder::TYPE, $format_folder_path, $site_name );
+            a\Folder::TYPE, $format_data_folder_path, $site_name );
         $template_folder = createContainerByPath(
             a\Folder::TYPE, $template_folder_path, $site_name );
             
         // create formats if non-existent
         foreach( $format_names as $format_name )
         {
-            $format_path = $format_folder_path . $slash . $format_name;
+            $format_path = $format_data_folder_path . $slash . $format_name;
             $format = $cascade->getScriptFormat( $format_path, $site_name );
             
             if( is_null( $format ) )
@@ -219,7 +227,8 @@ try
         }
         
         $default_format = $cascade->getAsset(
-            a\ScriptFormat::TYPE, $format_folder_path . $slash . "default", $site_name );
+            a\ScriptFormat::TYPE, $format_data_folder_path . $slash . "default",
+            $site_name );
             
         // attach block and format
         $cs->setConfigurationPageRegionBlock(
@@ -262,6 +271,63 @@ try
             $ct = $cascade->createContentType(
                 $ct_container, $ct_name, $cs, $ms, $dd );
         }
+        
+        // formats used to process blocks
+        $format_names = array(
+        	"custom_macro_list", "custom_macros", "process_block"
+        );
+        $format_folder = $cascade->getAsset(
+        	a\Folder::TYPE, $format_folder_path, $site_name );
+        
+        foreach( $format_names as $format_name )
+        {
+            $format_path = $format_folder_path . $slash . $format_name;
+            $format      = $cascade->getScriptFormat( $format_path, $site_name );
+            
+            if( is_null( $format ) )
+            {
+                $cascade->createScriptFormat( $format_folder, $format_name, "##" );
+            }
+        }
+        
+        // template-level format
+        $format_name = "template";
+        $format_path = $format_folder_path . $slash . $format_name;
+        $format      = $cascade->getScriptFormat( $format_path, $site_name );
+        
+        if( is_null( $format ) )
+        {
+            $template_format = $cascade->createXsltFormat(
+                $format_folder, $format_name, 
+                readData( $data_path, $format_name . ".txt" ) );
+        }
+        
+        // insert default contents to formats
+        $default_format->setScript( readData( $data_path, "default.txt" ) )->edit();
+        
+        $master_setup_name   = "master-setup";
+        $master_setup_format = $cascade->getAsset(
+        	a\ScriptFormat::TYPE, 
+        	$format_data_folder_path . $slash . $master_setup_name,
+        	$site_name );
+        $master_setup_format->setScript(
+            readData( $data_path, "master-setup" . ".txt" ) )->edit();
+        
+        $template_format->setXml( readData( $data_path, $format_name . ".txt" ) )->
+        	edit();
+           
+        foreach( $format_names as $format_name )
+        {
+        	$format = $cascade->getAsset(
+        		a\ScriptFormat::TYPE, 
+        		$format_folder_path . $slash . $format_name,
+        		$site_name );
+        	$format->setScript( readData( $data_path, $format_name . ".txt" ) )->
+        		edit();
+        }
+        
+        // attach template format to configuration
+        $cs->setFormat( $config_name, $template_format )->edit();
     }
     u\DebugUtility::outputDuration( $start_time );
 }
@@ -320,5 +386,11 @@ function createContainerByPath( string $type, string $path, string $site_name )
     }
     
     return $container;
+}
+
+function readData( string $path, string $file )
+{
+	global $slash;
+	return file_get_contents( $path . $slash . $file );;
 }
 ?>
