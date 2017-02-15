@@ -1,6 +1,6 @@
 # RWD2
 
-_common_assets_barebone.csse last modified: 2/6/2017 12:00 PM
+_core.csse last modified: 2/15/2017 9:30 AM
 
 RWD2, aka, the Standard Model, is my newest design and implementation of the master-template approach. This implementation contains a single one-region template (template_rwd_one_region.xml) used in all pages across multiple sites of the same design. In fact, in the implementation of the Hannon Hill site, I went further and used a single template containing only one line (<code>&lt;system-region name="DEFAULT"/&gt;</code>). I have also introduced the concept of setup formats. They can be used to replace setup blocks and offer much more flexibility. 
 
@@ -11,9 +11,9 @@ All the code I can post used in the implementation of the Standard Model can be 
 1. Velocity formats, which are posted under https://github.com/wingmingchan/velocity
 2. PHP code used to generate CSS
 
-The core without (much) Upstate business logic and data
+The core containing only library code
 
-1.  _common_assets_barebone.csse
+1.  _core.csse
 
 What are used in production at Upstate (last modified: 1/24/2017):
 
