@@ -40,12 +40,8 @@ $start_time = time();
 // else nothing will be created if the site exists
 $create_assets = true;
 $slash         = "/";
-$data_path     = "data";
+$data_path     = "data"; // the folder containing default format contents
 
-//echo readData( $data_path, "default.txt" );
-
-
-/*/  /*/
 try
 {
     u\DebugUtility::setTimeSpaceLimits();
@@ -140,7 +136,7 @@ try
         );
         echo "The site $site_name has been created.", BR;
         // set to true for a newly created site
-        $overwrite_assets = true;
+        $create_assets = true;
     }
     
     if( $create_assets )
