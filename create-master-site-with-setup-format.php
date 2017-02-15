@@ -158,9 +158,9 @@ try
         }
         
         // create folders if non-existent
-        $block_folder = createContainerByPath(
+        $block_folder    = createContainerByPath(
             a\Folder::TYPE, $block_folder_path, $site_name );
-        $format_folder = createContainerByPath(
+        $format_folder   = createContainerByPath(
             a\Folder::TYPE, $format_data_folder_path, $site_name );
         $template_folder = createContainerByPath(
             a\Folder::TYPE, $template_folder_path, $site_name );
@@ -189,7 +189,8 @@ try
                 a\Folder::TYPE );
         }
         
-        $calling_page_index_block->setRenderingBehavior( c\T::HIERARCHYWITHSIBLINGS )->
+        $calling_page_index_block->
+            setRenderingBehavior( c\T::HIERARCHYWITHSIBLINGS )->
             setAppendCallingPageData( true )->
             setIndexRegularContent( true )->
             setIndexSystemMetadata( true )->
@@ -273,10 +274,10 @@ try
         
         // formats used to process blocks
         $format_names = array(
-        	"custom_macro_list", "custom_macros", "process_block"
+            "custom_macro_list", "custom_macros", "process_block"
         );
         $format_folder = $cascade->getAsset(
-        	a\Folder::TYPE, $format_folder_path, $site_name );
+            a\Folder::TYPE, $format_folder_path, $site_name );
         
         foreach( $format_names as $format_name )
         {
@@ -306,23 +307,23 @@ try
         
         $master_setup_name   = "master-setup";
         $master_setup_format = $cascade->getAsset(
-        	a\ScriptFormat::TYPE, 
-        	$format_data_folder_path . $slash . $master_setup_name,
-        	$site_name );
+            a\ScriptFormat::TYPE, 
+            $format_data_folder_path . $slash . $master_setup_name,
+            $site_name );
         $master_setup_format->setScript(
             readData( $data_path, "master-setup" . ".txt" ) )->edit();
         
         $template_format->setXml( readData( $data_path, $format_name . ".txt" ) )->
-        	edit();
+            edit();
            
         foreach( $format_names as $format_name )
         {
-        	$format = $cascade->getAsset(
-        		a\ScriptFormat::TYPE, 
-        		$format_folder_path . $slash . $format_name,
-        		$site_name );
-        	$format->setScript( readData( $data_path, $format_name . ".txt" ) )->
-        		edit();
+            $format = $cascade->getAsset(
+                a\ScriptFormat::TYPE, 
+                $format_folder_path . $slash . $format_name,
+                $site_name );
+            $format->setScript( readData( $data_path, $format_name . ".txt" ) )->
+                edit();
         }
         
         // attach template format to configuration
@@ -389,7 +390,7 @@ function createContainerByPath( string $type, string $path, string $site_name )
 
 function readData( string $path, string $file )
 {
-	global $slash;
-	return file_get_contents( $path . $slash . $file );;
+    global $slash;
+    return file_get_contents( $path . $slash . $file );;
 }
 ?>
