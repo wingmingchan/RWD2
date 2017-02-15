@@ -227,14 +227,15 @@ try
         }
         
         $default_format = $cascade->getAsset(
-            a\ScriptFormat::TYPE, $format_data_folder_path . $slash . "default",
+            a\ScriptFormat::TYPE, 
+            $format_data_folder_path . $slash . "default",
             $site_name );
             
         // attach block and format
         $cs->setConfigurationPageRegionBlock(
                 $config_name, "DEFAULT", $calling_page_index_block )->
             setConfigurationPageRegionFormat(
-            $config_name, "DEFAULT", $default_format )->
+                $config_name, "DEFAULT", $default_format )->
             edit();    
         
         // create data definition containers if non-existent
@@ -268,8 +269,7 @@ try
             $ms = $cascade->getAsset(
                 a\MetadataSet::TYPE, $ms_container_path . $slash . "Page", $site_name );
             
-            $ct = $cascade->createContentType(
-                $ct_container, $ct_name, $cs, $ms, $dd );
+            $ct = $cascade->createContentType( $ct_container, $ct_name, $cs, $ms, $dd );
         }
         
         // formats used to process blocks
@@ -353,35 +353,36 @@ function createContainerByPath( string $type, string $path, string $site_name )
         return $cascade->getAsset( $type, $path, $site_name );
     }
     
-    $path_array = u\StringUtility::getExplodedStringArray( $slash, $path );
-    $array_size = count( $path_array );
+    // break up the path
+    $path_array   = u\StringUtility::getExplodedStringArray( $slash, $path );
+    $array_size   = count( $path_array );
     $parent_path  = "";
     $current_path = "";
     
     for( $i = 0; $i < $array_size; $i++ )
     {
-        if( $i == 0 )
+        if( $i == 0 ) // must keep the slash
             $parent_path = $slash;
-        else
+        else // trim slashes
             $parent_path = trim( $parent_path . $slash . $path_array[ $i - 1 ], $slash );
-            
+
         $current_path = $current_path . $slash . $path_array[ $i ];
         $current_path = trim( $current_path, $slash );
         $container    = NULL;
         
         try
         {
+            // if the container exists, just return it
             $container = $cascade->getAsset( $type, $current_path, $site_name );
         }
+        // the namespace shorthand does not work inside functions
         catch( cascade_ws_exception\NullAssetException $e )
         {
-            $parent = $cascade->getAsset( $type, $parent_path, $site_name );
+            // else create it
+            $parent      = $cascade->getAsset( $type, $parent_path, $site_name );
             $method_name = cascade_ws_constants\T::$type_property_name_map[ $type ];
             $method_name = "create" . ucwords( $method_name );
-            
-            $container = $cascade->$method_name(
-                $parent, $path_array[ $i ]
-            );
+            $container   = $cascade->$method_name( $parent, $path_array[ $i ] );
         }
     }
     
