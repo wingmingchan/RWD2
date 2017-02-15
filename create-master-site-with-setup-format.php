@@ -20,6 +20,9 @@ $format_data_folder_path
 $template_folder_path
 $calling_page_index_block_name
 $template_name
+
+Note that the program requires the data folder for default contents for formats.
+The folder should be a sibling of this program.
 */
 require_once( 'auth_tutorial7.php' );
 
