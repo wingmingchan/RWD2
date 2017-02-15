@@ -1,0 +1,34 @@
+<xsl:stylesheet
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xalan java" version="1.0"
+	xmlns:java="http://xml.apache.org/xalan/java"
+	xmlns:me="stylesheet"
+	xmlns:node="http://www.upstate.edu/chanw/node"
+	xmlns:xalan="http://xml.apache.org/xalan">
+	<xsl:output encoding="UTF-8" indent="yes" method="html"/>
+	<!-- add elements to be hidden and shown here -->
+	<xsl:variable name="hide-elements">
+		<element id="page-level-override" name="div"></element>
+	</xsl:variable>
+	<xsl:template match="@*|node()" priority="-1">
+		<xsl:variable name="name" select="name(.)"/>
+		<xsl:variable name="id" select="@id"/>
+		<!-- hide-whatever -->
+		<xsl:variable name="hideid" select="concat('hide-', substring-after(@id, 'show-'))"/>
+		<!-- content of hide-whatever -->
+		<xsl:variable name="hidden" select="//node()[name(.)=$name and @id=$hideid]/node()"/>
+		<xsl:choose>
+			<!-- remove hide-whatever -->
+			<xsl:when test="xalan:nodeset($hide-elements)/element[@name=$name and $id=concat('hide-', @id)]"/>
+			<!-- show the content of hide-whatever in the show-whatever area -->
+			<xsl:when test="xalan:nodeset($hide-elements)/element[@name=$name and $id=concat('show-', @id)]">
+				<xsl:apply-templates select="$hidden"/>
+			</xsl:when>
+			<!-- other nodes and attributes -->
+			<xsl:otherwise>
+				<xsl:copy>
+					<xsl:apply-templates select="@*|node()"/>
+				</xsl:copy>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+</xsl:stylesheet>

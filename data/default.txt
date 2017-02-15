@@ -1,0 +1,49 @@
+<!--#protect-top<!DOCTYPE html>#protect-top-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+## import the library
+#set( $core_site_name = "_core" )
+#import( "site://$core_site_name/formats/library/velocity/chanw_library_import" )
+
+## the master setup format
+#set( $master_namespace  = "hannonHill" )
+#set( $master_site_name  = "_common_assets_wing" )
+#import( "site://${master_site_name}/formats/data/master-setup" )
+
+## the site setup format
+#chanwImportScript( "/" $currentPageSiteName "setup" )
+
+## import required formats
+#chanwReviveGlobalVariable( "PrcessBlock" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+#chanwReviveGlobalVariable( "Title" $master_namespace )
+		<title>#import( $chanwReviveGlobalVariable ) Hannon Hill Corp.</title>
+#chanwReviveGlobalVariable( "Link" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+		<div id="show-page-level-override"></div>
+	</head>
+	<body data-offset="100" data-spy="scroll" data-target=".navbar-collapse">
+#chanwReviveGlobalVariable( "Google" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+#chanwReviveGlobalVariable( "NavDemo" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+
+
+## for a root-level page, there is no current folder
+#set( $page = $_XPathTool.selectSingleNode( $contentRoot, "//system-folder[@current]/system-page[@current]" ) )
+## root-level pages
+#if( $_PropertyTool.isNull( $page ) )
+    #set( $page = $_XPathTool.selectSingleNode( $contentRoot, "//system-page[@current]" ) )
+#end
+
+## process the page data definition here
+
+
+#chanwReviveGlobalVariable( "Contact" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+#chanwReviveGlobalVariable( "Footer" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+#chanwReviveGlobalVariable( "Script" $master_namespace )
+#import( $chanwReviveGlobalVariable )
+	</body>
+</html>

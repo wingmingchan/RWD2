@@ -1,0 +1,30 @@
+#macro( processRowGroup $groupToBeProcessed )
+    #set( $group_header = $groupToBeProcessed.getChild( "row-header" ).Value )
+    #set( $group_header_position = $groupToBeProcessed.getChild( "row-header-position" ).getChild( "value" ).Value )
+
+    #if( $group_header && $group_header.trim() != "" )
+        #if( $group_header_position && $group_header_position == "center" )
+            #set( $header_class = "row content-title-center" )
+        #else
+            #set( $header_class = "row wow fadeInUp animated animated" )
+        #end
+
+        #set( $header_str = "<div class='${header_class}'><div class='col-md-12'><h2>$group_header</h2></div></div>" )
+    #else
+        #set( $header_str = '' )
+    #end
+
+    #set( $block_choosers = $_XPathTool.selectNodes( $groupToBeProcessed, "row-block-chooser/content" ) )
+    
+    #if( $block_choosers.size() > 0 )
+<section class="whiteSmokeBackground small-full-section">
+<div class="container">$header_str
+<div class="row">
+        #foreach( $block_chooser in $block_choosers )
+            #chanwProcessBlockChooser( $block_chooser )
+        #end
+</div>
+</div>
+</section>
+    #end
+#end

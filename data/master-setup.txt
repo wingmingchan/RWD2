@@ -1,0 +1,5 @@
+## $master_site_name, $master_namespace defined in default
+#chanwSetVariable( "${master_namespace}Breadcrumbs" "site://${master_site_name}/formats/data/breadcrumbs" )
+#chanwSetVariable( "${master_namespace}Contact"     "site://${master_site_name}/formats/data/contact" )
+#chanwSetVariable( "${master_namespace}Demo"        "site://${master_site_name}/formats/data/demo" )
+#chanwSetVariable( "${master_namespace}FolderNav"   "site://${master_site_name}/formats/data/folder-nav" )
