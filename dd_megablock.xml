@@ -1,324 +1,114 @@
-<system-index-block current-time="1460980929881" name="about-rwd-index" type="folder">
-    <system-page id="3786f90a8b7f08560135b47c5403ea79">
-        <name> index</name>
-        <is-published> true</is-published>
-        <last-published-on> 1454700786637</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> About Upstate</title>
-        <display-name> About Upstate</display-name>
-        <path> /index</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/index</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155701881</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709431063</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="3786d6978b7f08560135b47cdb47b91b">
-        <name> impact</name>
-        <is-published> true</is-published>
-        <last-published-on> 1456174987833</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Upstate's Regional Impact</title>
-        <display-name> Upstate's Regional Impact</display-name>
-        <path> /impact</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/impact</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155693069</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709426538</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="3787305b8b7f08560135b47cf1a8a8b7">
-        <name> leadership</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450385640781</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Upstate Leadership</title>
-        <display-name> Upstate Leadership</display-name>
-        <path> /leadership</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/leadership</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155716049</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709439548</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="378784aa8b7f08560135b47c80e75bdf">
-        <name> mission</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450385640781</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Mission, Vision & Values</title>
-        <display-name> Mission, Vision and Values</display-name>
-        <path> /mission</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/mission</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155737629</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709448305</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-folder id="375f8aba8b7f08560135b47c5a9f7403">
-        <name> visitors</name>
-        <is-published> true</is-published>
-        <title> Visitor's Guide</title>
-        <summary> This guide is designed to help you navigate the Upstate campus. It includes a
-            section for patients and hospital visitors, a section for students and academic
-            visitors, and general information on food, lodging, ATM locations, etc. We hope this
-            guide helps you during your visit to Central New York's only biomedical research center
-            and health care complex.</summary>
-        <keywords> visitors guide locations</keywords>
-        <display-name> Visitors Guide</display-name>
-        <path> /visitors</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/visitors</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431153117843</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1454337200319</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> show-intra-icon</name>
-        </dynamic-metadata>
-        <system-page id="37862a9e8b7f08560135b47cfce01762">
-            <name> index</name>
-            <is-published> true</is-published>
-            <last-published-on> 1450385640781</last-published-on>
-            <last-published-by> nellenbb</last-published-by>
-            <title> Visitors' Guide</title>
-            <display-name> Visitors' Guide</display-name>
-            <path> /visitors/index</path>
-            <site> about-rwd-dev</site>
-            <link> site://about-rwd-dev/visitors/index</link>
-            <created-by> batchjob</created-by>
-            <created-on> 1431155649035</created-on>
-            <last-modified-by> chanw</last-modified-by>
-            <last-modified> 1457709402776</last-modified>
-            <dynamic-metadata>
-                <name> exclude-from-menu</name>
-            </dynamic-metadata>
-            <dynamic-metadata>
-                <name> exclude-from-left</name>
-            </dynamic-metadata>
-        </system-page>
-        <system-page id="378646e38b7f08560135b47c06fe5601">
-            <name> visitors-academic</name>
-            <is-published> true</is-published>
-            <last-published-on> 1450385640781</last-published-on>
-            <last-published-by> nellenbb</last-published-by>
-            <title> Students and Academic Visitors</title>
-            <display-name> Students and Academic Visitors</display-name>
-            <path> /visitors/visitors-academic</path>
-            <site> about-rwd-dev</site>
-            <link> site://about-rwd-dev/visitors/visitors-academic</link>
-            <created-by> batchjob</created-by>
-            <created-on> 1431155656263</created-on>
-            <last-modified-by> chanw</last-modified-by>
-            <last-modified> 1457709406292</last-modified>
-            <dynamic-metadata>
-                <name> exclude-from-menu</name>
-            </dynamic-metadata>
-            <dynamic-metadata>
-                <name> exclude-from-left</name>
-            </dynamic-metadata>
-        </system-page>
-        <system-page id="378663788b7f08560135b47c7b52203e">
-            <name> visitors-general</name>
-            <is-published> true</is-published>
-            <last-published-on> 1450385640781</last-published-on>
-            <last-published-by> nellenbb</last-published-by>
-            <title> General Information</title>
-            <display-name> General Information</display-name>
-            <path> /visitors/visitors-general</path>
-            <site> about-rwd-dev</site>
-            <link> site://about-rwd-dev/visitors/visitors-general</link>
-            <created-by> batchjob</created-by>
-            <created-on> 1431155663601</created-on>
-            <last-modified-by> chanw</last-modified-by>
-            <last-modified> 1457709409745</last-modified>
-            <dynamic-metadata>
-                <name> exclude-from-menu</name>
-            </dynamic-metadata>
-            <dynamic-metadata>
-                <name> exclude-from-left</name>
-            </dynamic-metadata>
-        </system-page>
-        <system-page id="37867cc28b7f08560135b47c4ed4561e">
-            <name> visitors-patients</name>
-            <is-published> true</is-published>
-            <last-published-on> 1450385640781</last-published-on>
-            <last-published-by> nellenbb</last-published-by>
-            <title> Patients and Hospital Visitors</title>
-            <display-name> Patients and Hospital Visitors</display-name>
-            <path> /visitors/visitors-patients</path>
-            <site> about-rwd-dev</site>
-            <link> site://about-rwd-dev/visitors/visitors-patients</link>
-            <created-by> batchjob</created-by>
-            <created-on> 1431155670075</created-on>
-            <last-modified-by> chanw</last-modified-by>
-            <last-modified> 1457709413396</last-modified>
-            <dynamic-metadata>
-                <name> exclude-from-menu</name>
-            </dynamic-metadata>
-            <dynamic-metadata>
-                <name> exclude-from-left</name>
-            </dynamic-metadata>
-        </system-page>
-    </system-folder>
-    <system-page id="37869b7b8b7f08560135b47c897797b7">
-        <name> contact</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450454869332</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Contact Upstate</title>
-        <display-name> Contact Upstate</display-name>
-        <path> /contact</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/contact</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155677934</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709418888</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="3787b3da8b7f08560135b47c9281c473">
-        <name> syracuse</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450385640781</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> About Syracuse & Central New York</title>
-        <display-name> About Syracuse & Central New York</display-name>
-        <path> /syracuse</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/syracuse</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155749717</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709456009</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="3786b69d8b7f08560135b47ccee68549">
-        <name> glance</name>
-        <is-published> true</is-published>
-        <last-published-on> 1455738868995</last-published-on>
-        <last-published-by> vanwied</last-published-by>
-        <title> SUNY Upstate at a Glance</title>
-        <display-name> Upstate at a Glance</display-name>
-        <path> /glance</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/glance</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155684884</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709422535</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="3787150b8b7f08560135b47c94892014">
-        <name> join</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450385640781</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Join Upstate</title>
-        <display-name> Join Upstate</display-name>
-        <path> /join</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/join</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155709011</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709434371</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="3787618c8b7f08560135b47c294bb70c">
-        <name> leadership-search</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450385640781</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Leadership Search at Upstate</title>
-        <display-name> Leadership Search</display-name>
-        <path> /leadership-search</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/leadership-search</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155728641</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709443162</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-            <value> Yes</value>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-            <value> Yes</value>
-        </dynamic-metadata>
-    </system-page>
-    <system-page id="37879cd58b7f08560135b47c3154dba6">
-        <name> spectate</name>
-        <is-published> true</is-published>
-        <last-published-on> 1450385640781</last-published-on>
-        <last-published-by> nellenbb</last-published-by>
-        <title> Spectate</title>
-        <display-name> Spectate</display-name>
-        <path> /spectate</path>
-        <site> about-rwd-dev</site>
-        <link> site://about-rwd-dev/spectate</link>
-        <created-by> batchjob</created-by>
-        <created-on> 1431155743823</created-on>
-        <last-modified-by> chanw</last-modified-by>
-        <last-modified> 1457709451447</last-modified>
-        <dynamic-metadata>
-            <name> exclude-from-menu</name>
-        </dynamic-metadata>
-        <dynamic-metadata>
-            <name> exclude-from-left</name>
-            <value> Yes</value>
-        </dynamic-metadata>
-    </system-page>
-</system-index-block>
+<system-data-structure>
+    <text identifier="block-type" label="Block type" restrict-to-groups="wing" default="megablock"/>
+    <text type="radiobutton" identifier="display" label="Display" default="yes" required="true" help-text="Select yes to display">
+        <radio-item value="yes"/>
+        <radio-item value="no"/>
+    </text>
+    <text type="radiobutton" identifier="choose-type" label="Choose A Type" default="wysiwyg" required="true" help-text="Select a block type">
+        <radio-item value="accordion" show-fields="accordion-group"/>
+        <radio-item value="contact" show-fields="contact-group"/>
+        <radio-item value="quick-links" show-fields="quick-links-group"/>
+        <radio-item value="simple-table" show-fields="simple-table-group"/>
+        <radio-item value="tab" show-fields="tab-group"/>
+        <radio-item value="wysiwyg" show-fields="wysiwyg-group"/>
+    </text>
+    <!-- accordion -->
+    <group identifier="accordion-group" label="Accordion Group">
+        <text type="checkbox" identifier="accordion-expandall" label="Show Expand All">
+            <checkbox-item value="Yes" checked="true"/>
+        </text>
+        <group identifier="accordion-h2-wysiwyg-group" label="H2 WYSIWYG Group" multiple="true">
+            <text identifier="accordion-h2" label="H2 Text" help-text="Text to be clicked to expand the hidden content"/>
+            <text wysiwyg="true" identifier="accordion-wysiwyg" label="Content"/>
+        </group>
+    </group>
+    <!-- Contact -->
+    <group identifier="contact-group" label="Contact Group">
+        <text identifier="contact-intro-text" label="Introduction text" help-text="Text appearing before Contact:"/>
+        <text identifier="contact-name" label="Name"/>
+        <text identifier="contact-title" label="Title" help-text="This value will be italicized and put after the name."/>
+        <text type="checkbox" identifier="contact-keep-contact-label" label="Keep label Contact" help-text="Uncheck this to remove the label Contact:">
+            <checkbox-item value="Yes"/>
+        </text>
+        <text identifier="contact-location" label="Location" help-text="This field allows one line only. If line break is needed, use Additional Field."/>
+        <group identifier="contact-af-group" label="Additional Field" multiple="true" minimum-number="1">
+            <text identifier="contact-af-label" label="Label" help-text="The label in boldface preceding the content. There is a semi-colon between the label and content."/>
+            <text identifier="contact-af-content" label="Content" help-text="Each value will be in a line by itself. If there is a label, it will follow the label."/>
+        </group>
+        <text identifier="contact-phone" label="Phone" help-text="Format: 315 464-XXXX"/>
+        <text identifier="contact-fax" label="Fax" help-text="Format: 315 464-XXXX"/>
+        <text identifier="contact-email" label="Email"/>
+    </group>
+    <!-- Quick Links -->
+    <group identifier="quick-links-group" label="Quick Links Group">
+        <text type="dropdown" identifier="quick-links-class" label="Class" default="quick-links-bullets">
+            <dropdown-item value="quick-links-buttons"/>
+            <dropdown-item value="quick-links-bullets"/>
+            <dropdown-item value="quick-links-menu"/>
+            <dropdown-item value="quick-links-no-bullets"/>
+        </text>
+        <text identifier="quick-links-title" label="Title of the box"/>
+        <group identifier="quick-links-list-group" label="Links" multiple="true">
+            <text identifier="quick-links-text" label="Link text"/>
+            <asset type="page,file,symlink" identifier="quick-links-linkable" label="Page, file, or external link" help-text="Select a page, a file, or an external link"/>
+            <text type="radiobutton" identifier="quick-links-icon" label="Icon" default="None">
+                <radio-item value="None"/>
+                <radio-item value="PDF"/>
+                <radio-item value="External"/>
+                <radio-item value="Word"/>
+                <radio-item value="Intra"/>
+            </text>
+        </group>
+    </group>
+    <!-- simple-table -->
+    <group identifier="simple-table-group" label="Simple Table Group">
+        <text identifier="table-summary" label="Table Summary"/>
+        <text type="radiobutton" identifier="column-number" label="How many columns?" default="2">
+            <radio-item value="1" show-fields="simple-table-group/column1-type, simple-table-group/heading1"/>
+            <radio-item value="2" show-fields="simple-table-group/heading2, simple-table-group/heading1, simple-table-group/column1-type, simple-table-group/column2-type"/>
+            <radio-item value="3" show-fields="simple-table-group/heading1, simple-table-group/heading3, simple-table-group/heading2, simple-table-group/column1-type, simple-table-group/column2-type, simple-table-group/column3-type"/>
+            <radio-item value="4" show-fields="simple-table-group/heading1, simple-table-group/heading2, simple-table-group/heading4, simple-table-group/heading3, simple-table-group/column1-type, simple-table-group/column2-type, simple-table-group/column3-type, simple-table-group/column4-type"/>
+        </text>
+        <text identifier="heading1" label="heading 1"/>
+        <text identifier="heading2" label="heading 2"/>
+        <text identifier="heading3" label="heading 3"/>
+        <text identifier="heading4" label="heading 4"/>
+        <text type="radiobutton" identifier="column1-type" label="column 1 type" default="text box">
+            <radio-item value="text box" show-fields="simple-table-group/rows/column-1-textbox"/>
+            <radio-item value="wysiwyg" show-fields="simple-table-group/rows/column-1-wysiwyg"/>
+        </text>
+        <text type="radiobutton" identifier="column2-type" label="column 2 type" default="text box">
+            <radio-item value="text box" show-fields="simple-table-group/rows/column-2-textbox"/>
+            <radio-item value="wysiwyg" show-fields="simple-table-group/rows/column-2-wysiwyg"/>
+        </text>
+        <text type="radiobutton" identifier="column3-type" label="column 3 type" default="text box">
+            <radio-item value="text box" show-fields="simple-table-group/rows/column-3-textbox"/>
+            <radio-item value="wysiwyg" show-fields="simple-table-group/rows/column-3-wysiwyg"/>
+        </text>
+        <text type="radiobutton" identifier="column4-type" label="column 4 type" default="text box">
+            <radio-item value="text box" show-fields="simple-table-group/rows/column-4-textbox"/>
+            <radio-item value="wysiwyg" show-fields="simple-table-group/rows/column-4-wysiwyg"/>
+        </text>
+        <group identifier="rows" label="Rows" multiple="true">
+            <text identifier="column-1-textbox" label="column 1"/>
+            <text wysiwyg="true" identifier="column-1-wysiwyg" label="column 1"/>
+            <text identifier="column-2-textbox" label="column 2"/>
+            <text wysiwyg="true" identifier="column-2-wysiwyg" label="column 2"/>
+            <text identifier="column-3-textbox" label="column 3"/>
+            <text wysiwyg="true" identifier="column-3-wysiwyg" label="column 3"/>
+            <text identifier="column-4-textbox" label="column 4"/>
+            <text wysiwyg="true" identifier="column-4-wysiwyg" label="column 4"/>
+        </group>
+    </group>
+    <!-- Tab -->
+    <group identifier="tab-group" label="Tab Group">
+        <group identifier="tab-panel-group" label="Tab Panel Group" multiple="true">
+            <text identifier="tab-label" label="Label"/>
+            <text wysiwyg="true" identifier="tab-content" label="Content"/>
+        </group>
+    </group>
+    <!-- WYSIWYG -->
+    <group identifier="wysiwyg-group" label="WYSIWYG Group">
+        <text wysiwyg="true" identifier="wysiwyg-content" label="Content"/>
+    </group>
+</system-data-structure>
