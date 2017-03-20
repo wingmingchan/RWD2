@@ -1,10 +1,8 @@
 # RWD2
 
-_core.csse last modified: 3/7/2017 8:00 AM
+I have started a new repository named multiple-design. All new files related to the multiple-design master site are posted there. This RWD2 repository is dated, and I have stopped updating it.
 
-RWD2, aka, the Standard Model, is my newest design and implementation of the master-template approach. This implementation contains a single one-region template (template_rwd_one_region.xml) used in all pages across multiple sites of the multiple designs. In fact, in the implementation of the newest master site (https://github.com/wingmingchan/velocity/blob/master/multiple-design/_master_site.csse), there is only one line (<code>&lt;system-region name="DEFAULT"/&gt;</code>) in the template. I have also introduced the concept of setup formats. They can be used to replace setup blocks and offer much more flexibility.
-
-The Standard Model is also compatible with multiple-region templates (see template_rwd.xml, for example). All Upstate responsive sites are driven by the Standard Model.
+==========================================================================================
 
 All the code I can post used in the implementation of the Standard Model can be found here. What are not included here:
 
